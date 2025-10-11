@@ -1,32 +1,26 @@
 ---
-title: Лабораторная работа №1
-subtitle: Введение в Mininet
-
+## Front matter
+lang: ru-RU
+title: "Лабораторная работа №3"
+subtitle: "Измерение и тестирование пропускной способности сети. Воспроизводимый эксперимент"
 author:
   - Хрусталев В.Н.
 institute:
   - Российский университет дружбы народов, Москва, Россия
-lang: ru-RU
+
+## i18n babel
 babel-lang: russian
 babel-otherlangs: english
-fonttheme: professionalfonts
-mainfont: DejaVu Sans
-sansfont: DejaVu Sans
-monofont: DejaVu Sans Mono
-theme: metropolis
+
+## Formatting pdf
+toc: false
+toc-title: Содержание
+slide_level: 2
 aspectratio: 169
 section-titles: true
-toc: false
-slide_level: 2
+theme: metropolis
 header-includes:
-  - \usepackage{polyglossia}
-  - \setdefaultlanguage{russian}
-  - \setotherlanguage{english}
-  - \usepackage{fontspec}
-  - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
-  - \makeatletter
-  - \beamer@ignorenonframefalse
-  - \makeatother
+ - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
 ---
 
 # Информация
@@ -49,14 +43,67 @@ header-includes:
 
 # Цель работы
 
-
+Основной целью работы является знакомство с инструментом для измерения
+пропускной способности сети в режиме реального времени — iPerf3, а также
+получение навыков проведения воспроизводимого эксперимента по измерению
+пропускной способности моделируемой сети в среде Mininet.
 
 # Выполнение лабораторной работы
 
-![](image/1.png){#fig:001 width=65%}
+## Создание подкаталога, копирование файла с примером скрипта (описывающего стандартную простую топологию сети mininet)
+
+![Создание подкаталога, копирование файла с примером скрипта (описывающего стандартную простую топологию сети mininet)](image/1.png){#fig:001 width=70%}
+
+## Содержание файла lab_iperf3_topo.py
+
+![Содержание файла lab_iperf3_topo.py](image/2.png){#fig:002 width=70%}
+
+## Запуск скрипта создания топологии и дальнейший просмотр элементов
+
+![Запуск скрипта создания топологии и дальнейший просмотр элементов](image/3.png){#fig:003 width=70%}
+
+## Внесение изменения в скрипт, позволяющего вывести на экран информацию о хостах h1 и h2 (имя, IP-адрес, MAC-адрес)
+
+![Внесение изменения в скрипт, позволяющего вывести на экран информацию о хостах h1 и h2 (имя, IP-адрес, MAC-адрес)](image/4.png){#fig:004 width=70%}
+
+## Проверка корректности отработки скрипта
+
+![Проверка корректности отработки скрипта](image/5.png){#fig:005 width=70%}
+
+## Настройка параметров производительности
+
+![Настройка параметров производительности](image/6.png){#fig:006 width=70%}
+
+## Запуск скрипта с настройкой параметров производительности и без нее
+
+![Запуск скрипта с настройкой параметров производительности и без нее](image/7.png){#fig:007 width=70%}
+
+## Создание копии скрипта lab_iperf3_topo2.py
+
+![Создание копии скрипта lab_iperf3_topo2.py](image/8.png){#fig:008 width=70%}
+
+## Изменения кода в скрипте lab_iperf3.py
+
+![Изменения кода в скрипте lab_iperf3.py](image/9.png){#fig:009 width=70%}
+
+## Запуск скрипта lab_iperf3.py
+
+![Запуск скрипта lab_iperf3.py](image/10.png){#fig:010 width=70%}
+
+## Создание Makefile
+
+![Создание Makefile](image/11.png){#fig:011 width=70%}
+
+## Проверка работы Makefile
+
+![Проверка работы Makefile](image/12.png){#fig:012 width=70%}
 
 # Выводы
 
+В ходе выполнения лабораторной работы я познакомился с инструментом для измерения
+пропускной способности сети в режиме реального времени — iPerf3, а также
+получение навыков проведения интерактивного эксперимента по измерению
+пропускной способности моделируемой сети в среде Mininet.
 
 
 # Список литературы

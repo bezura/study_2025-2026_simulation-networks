@@ -1,32 +1,26 @@
 ---
-title: Лабораторная работа №1
-subtitle: Введение в Mininet
-
+## Front matter
+lang: ru-RU
+title: "Лабораторная работа №6"
+subtitle: "Настройка пропускной способности глобальной сети с помощью Token Bucket Filter"
 author:
   - Хрусталев В.Н.
 institute:
   - Российский университет дружбы народов, Москва, Россия
-lang: ru-RU
+
+## i18n babel
 babel-lang: russian
 babel-otherlangs: english
-fonttheme: professionalfonts
-mainfont: DejaVu Sans
-sansfont: DejaVu Sans
-monofont: DejaVu Sans Mono
-theme: metropolis
+
+## Formatting pdf
+toc: false
+toc-title: Содержание
+slide_level: 2
 aspectratio: 169
 section-titles: true
-toc: false
-slide_level: 2
+theme: metropolis
 header-includes:
-  - \usepackage{polyglossia}
-  - \setdefaultlanguage{russian}
-  - \setotherlanguage{english}
-  - \usepackage{fontspec}
-  - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
-  - \makeatletter
-  - \beamer@ignorenonframefalse
-  - \makeatother
+ - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
 ---
 
 # Информация
@@ -49,15 +43,113 @@ header-includes:
 
 # Цель работы
 
-
+Основной целью работы является знакомство с принципами работы дисциплины очереди Token Bucket Filter, которая формирует входящий/исходящий трафик для ограничения пропускной способности, а также получение навыков моделирования и исследования поведения трафика посредством проведения интерактивного и воспроизводимого экспериментов в Mininet.
 
 # Выполнение лабораторной работы
 
-![](image/1.png){#fig:001 width=65%}
+## Настройка X-соединения
+
+![Настройка X-соединения](image/1.png){#fig:001 width=70%}
+
+## Запуск простейшей топологии
+
+![Запуск простейшей топологии](image/2.png){#fig:002 width=70%}
+
+## Информация на хостах и коммутаторах об интерфейсах
+
+![Информация на хостах и коммутаторах об интерфейсах](image/3.png){#fig:003 width=70%}
+
+## Тестирование соединения между h1 и h2
+
+![Тестирование соединения между h1 и h2](image/4.png){#fig:004 width=70%}
+
+## Проверка изначальной пропускной способности
+
+![Проверка изначальной пропускной способности](image/5.png){#fig:005 width=70%}
+
+## Ограничение скорости на конечных хостах и тест
+
+![Ограничение скорости на конечных хостах и тест](image/6.png){#fig:006 width=70%}
+
+## Ограничение скорости на коммутаторе и тест
+
+![Ограничение скорости на коммутаторе и тест](image/7.png){#fig:007 width=70%}
+
+## Удаление модифицированной конфигурации на коммутаторе s1
+
+![Удаление модифицированной конфигурации на коммутаторе s1](image/8.png){#fig:008 width=70%}
+
+## Добавление NETEM правила задержки пакетов
+
+![Добавление NETEM правила задержки пакетов](image/9.png){#fig:009 width=70%}
+
+## Добавление 2-го правила ограничения скорости и тест
+
+![Добавление 2-го правила ограничения скорости и тест](image/10.png){#fig:010 width=70%}
+
+## Удаление модифицированной конфигурации на коммутаторе s1
+
+![Удаление модифицированной конфигурации на коммутаторе s1](image/11.png){#fig:011 width=70%}
+
+## Создание необходимых файлов
+
+![Создание необходимых файлов](image/12.png){#fig:012 width=70%}
+
+## Листинг exp1/lab_tbf_i.py
+
+![Листинг exp1/lab_tbf_i.py](image/13.png){#fig:013 width=70%}
+
+## Листинг Makefile и ping_plot
+
+![Листинг Makefile и ping_plot](image/14.png){#fig:014 width=70%}
+
+## Запуск exp1
+
+![Запуск exp1](image/15.png){#fig:015 width=70%}
+
+## График iperf3.png из exp1
+
+![График iperf3.png из exp1](image/16.png){#fig:016 width=70%}
+
+## График ping.png из exp1
+
+![График ping.png из exp1](image/17.png){#fig:017 width=70%}
+
+## Листинг exp2/lab_tbf_i.py
+
+![Листинг exp2/lab_tbf_i.py](image/18.png){#fig:018 width=70%}
+
+## Запуск exp2
+
+![Запуск exp2](image/19.png){#fig:019 width=70%}
+
+## График iperf3.png из exp2
+
+![График iperf3.png из exp2](image/20.png){#fig:020 width=70%}
+
+## График ping.png из exp2
+
+![График ping.png из exp2](image/21.png){#fig:021 width=70%}
+
+## Листинг exp3/lab_tbf_i.py
+
+![Листинг exp3/lab_tbf_i.py](image/22.png){#fig:022 width=70%}
+
+## Запуск exp3
+
+![Запуск exp3](image/23.png){#fig:023 width=70%}
+
+## График iperf3.png из exp3
+
+![График iperf3.png из exp3](image/24.png){#fig:024 width=70%}
+
+## График ping.png из exp3
+
+![График ping.png из exp3](image/25.png){#fig:025 width=70%}
 
 # Выводы
 
-
+В результате выполнения работы я познакомился с принципами работы Token Bucket Filter, а также получили навыки моделирования и исследования поведения трафика посредством проведения интерактивного и воспроизводимого экспериментов в Mininet.
 
 # Список литературы
 

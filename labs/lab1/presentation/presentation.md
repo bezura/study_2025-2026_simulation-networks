@@ -1,32 +1,26 @@
 ---
-title: Лабораторная работа №1
-subtitle: Введение в Mininet
-
+## Front matter
+lang: ru-RU
+title: "Лабораторная работа №1"
+subtitle: "Введение в Mininet"
 author:
   - Хрусталев В.Н.
 institute:
   - Российский университет дружбы народов, Москва, Россия
-lang: ru-RU
+
+## i18n babel
 babel-lang: russian
 babel-otherlangs: english
-fonttheme: professionalfonts
-mainfont: DejaVu Sans
-sansfont: DejaVu Sans
-monofont: DejaVu Sans Mono
-theme: metropolis
+
+## Formatting pdf
+toc: false
+toc-title: Содержание
+slide_level: 2
 aspectratio: 169
 section-titles: true
-toc: false
-slide_level: 2
+theme: metropolis
 header-includes:
-  - \usepackage{polyglossia}
-  - \setdefaultlanguage{russian}
-  - \setotherlanguage{english}
-  - \usepackage{fontspec}
-  - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
-  - \makeatletter
-  - \beamer@ignorenonframefalse
-  - \makeatother
+ - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
 ---
 
 # Информация
@@ -49,15 +43,133 @@ header-includes:
 
 # Цель работы
 
-
+Основной целью работы является развёртывание в системе виртуализации VirtualBox mininet, знакомство с основными командами для работы с Mininet через командную строку и через графический интерфейс.
 
 # Выполнение лабораторной работы
 
-![](image/1.png){#fig:001 width=65%}
+## Установка и настройка виртуальной машины
+
+![Установка и настройка виртуальной машины](image/1.png){#fig:001 width=85%}
+
+## Вход и просмотр адреса виртуальной машины
+
+![Вход и просмотр адреса виртуальной машины](image/2.png){#fig:002 width=85%}
+
+## Подключение к виртуальной машине из терминала хостовой машины
+
+![Подключение к виртуальной машине из терминала хостовой машины](image/3.png){#fig:003 width=85%}
+
+## Установка putty
+
+![Установка putty](image/4.png){#fig:004 width=85%}
+
+## Установка VcXsrv Windows X Server
+
+![Установка VcXsrv Windows X Server](image/5.png){#fig:005 width=85%}
+
+## Запуск и настройка Xserver | Часть 1
+
+![Запуск и настройка Xserver | Часть 1](image/6.png){#fig:006 width=85%}
+
+## Запуск и настройка Xserver | Часть 2
+
+![Запуск и настройка Xserver | Часть 2](image/7.png){#fig:007 width=85%}
+
+## Запуск и настройка Xserver | Часть 3
+
+![Запуск и настройка Xserver | Часть 3](image/8.png){#fig:008 width=85%}
+
+## Запуск и настройка Xserver | Часть 4
+
+![Запуск и настройка Xserver | Часть 4](image/9.png){#fig:009 width=85%}
+
+## Опция перенаправления Х11
+
+![Опция перенаправления Х11](image/10.png){#fig:010 width=85%}
+
+## Файл /etc/netplan/01-netcfg.yaml
+
+![Файл /etc/netplan/01-netcfg.yaml](image/11.png){#fig:011 width=85%}
+
+## Обновление Mininet
+
+![Обновление Mininet](image/12.png){#fig:012 width=85%}
+
+## Проверка версии Mininet
+
+![Обновление Mininet/ВЕРСИЯ](image/13.png){#fig:013 width=85%}
+
+## Настройка шрифтов XTerm
+
+![Настройка шрифтов XTerm](image/14.png){#fig:014 width=85%}
+
+## Настройка соединения X11 для суперпользователя
+
+![Настройка соединения X11 для суперпользователя](image/15.png){#fig:015 width=85%}
+
+## Mininet с использованием топологии по умолчанию
+
+![Mininet с использованием топологии по умолчанию](image/16.png){#fig:016 width=85%}
+
+## Отображение результата help команды
+
+![Отображение результата help команды](image/17.png){#fig:017 width=85%}
+
+## Отображение доступных узлов
+
+![Отображение доступных узлов](image/18.png){#fig:018 width=85%}
+
+## Просмотр доступных линков
+
+![Просмотр доступных линков](image/19.png){#fig:019 width=85%}
+
+## Команда h1 ifconfig
+
+![Команда h1 ifconfig](image/20.png){#fig:020 width=85%}
+
+## Команда h1 ping 10.0.0.2
+
+![Команда h1 ping 10.0.0.2](image/21.png){#fig:021 width=85%}
+
+## Очистка предыдущего экземпляра Mininet
+
+![Очистка предыдущего экземпляра Mininet](image/22.png){#fig:022 width=85%}
+
+## Добавление двух хостов и одного коммутатора
+
+![Добавление двух хостов и одного коммутатора](image/23.png){#fig:023 width=85%}
+
+## Настройка IP-адреса на хосте h1 и h2
+
+![Настройка IP-адреса на хосте h1 и h2](image/24.png){#fig:024 width=85%}
+
+## Проверка IP-адресов. Пинг
+
+![Проверка IP-адресов. Пинг](image/25.png){#fig:025 width=85%}
+
+## Смена базового IP-адреса
+
+![Смена базового IP-адреса](image/26.png){#fig:026 width=85%}
+
+## Просмотр IP-адреса на h1
+
+![Просмотр IP-адреса на h1](image/27.png){#fig:027 width=85%}
+
+## Создание нового каталога
+
+![Создание нового каталога](image/28.png){#fig:028 width=85%}
+
+## Сохранение топологии
+
+![Сохранение топологии](image/29.png){#fig:029 width=85%}
+
+## Изменение прав доступа к файлам в каталоге проекта
+
+![Изменение прав доступа к файлам в каталоге проекта](image/30.png){#fig:030 width=85%}
 
 # Выводы
 
-
+В результате выполнения работы я развёрнул mininet в системе виртуализации VirtualBox и ознакомилась с основными командами для работы с Mininet через командную строку и через графический интерфейс.
 
 # Список литературы
 
